@@ -9,4 +9,6 @@ class Course:
 
         self.data = loadfile(os.path.join(folder, "course.yml"))
 
-
+    @property
+    def name(self):
+        return self.data["name"]
