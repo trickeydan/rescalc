@@ -1,11 +1,13 @@
 import os
 
 from .io import loadfile
+from .module import Module
 
 
 class Course:
 
     def __init__(self, folder):
+        self.folder = folder
         self.data = loadfile(os.path.join(folder, "course.yml"))
 
     @property
@@ -16,7 +18,7 @@ class Course:
     def parts(self):
         parts = []
         for part in self.data["parts"]:
-            parts.append(Part(part))
+            parts.append(Part(self.folder, part))
         return parts
 
     @property
@@ -38,7 +40,8 @@ class Course:
 
 class Part:
 
-    def __init__(self, data):
+    def __init__(self, folder, data):
+        self.folder = folder
         self.data = data
 
     @property
@@ -60,19 +63,20 @@ class Part:
         for sem in self.semesters:
             score += sem.score
         score /= len(self.semesters)
-        return score
+        return round(score,2)
 
     @property
     def semesters(self):
         semesters = []
         for sem in self.data["semesters"]:
-            semesters.append(Semester(sem))
+            semesters.append(Semester(self.folder, sem))
         return semesters
 
 
 class Semester:
 
-    def __init__(self, data):
+    def __init__(self, folder, data):
+        self.folder = folder
         self.data = data
 
     @property
@@ -81,8 +85,22 @@ class Semester:
 
     @property
     def score(self):
-        return 100
+
+        if len(self.modules) <= 0:
+            return 0
+
+        score = 0
+
+        for mod in self.modules:
+            score += mod.score
+        score /= len(self.modules)
+        return round(score,2)
 
     @property
     def modules(self):
-        return self.data["modules"]
+        modules = []
+        if self.data["modules"] is None:
+            return []
+        for mod in self.data["modules"]:
+            modules.append(Module(self.folder, mod))
+        return modules

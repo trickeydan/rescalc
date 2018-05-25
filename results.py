@@ -13,6 +13,10 @@ def print_course_info(course):
         print("\t", part.name, "(", part.score, ")")
         for sem in part.semesters:
             print("\t\t", sem.name, "(", sem.score, ")")
+            for mod in sem.modules:
+                print("\t\t\t", mod.name, "(", mod.score, ")")
+                for assess in mod.assessments:
+                    print("\t\t\t\t", assess.name, "(", assess.score, ")")
 
 
 FUNCTION_MAP = {
