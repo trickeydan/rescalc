@@ -10,13 +10,13 @@ def print_course_info(course):
     print("Classification:", course.classification)
     print("The course has", len(course.parts), "parts:")
     for part in course.parts:
-        print("\t", part.name, "(", part.score, ")")
+        print("\t", round(part.score, 1), "-", part.name)
         for sem in part.semesters:
-            print("\t\t", sem.name, "(", sem.score, ")")
+            print("\t\t", round(sem.score, 1), "-", sem.name)
             for mod in sem.modules:
-                print("\t\t\t", mod.name, "(", mod.score, ")")
+                print("\t\t\t", round(mod.score, 1), "-", mod.name)
                 for assess in mod.assessments:
-                    print("\t\t\t\t", assess.name, "(", assess.score, ")")
+                    print("\t\t\t\t", round(assess.score, 1), "-", assess.name)
 
 
 FUNCTION_MAP = {

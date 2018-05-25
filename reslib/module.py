@@ -26,8 +26,11 @@ class Module:
 
         for assess in self.assessments:
             score += assess.score * assess.weight
-        return round(score, 2)
+        return score
 
+    @property
+    def classification(self):
+        return "???"
 
     @property
     def assessments(self):
@@ -49,8 +52,12 @@ class Assessment:
 
     @property
     def score(self):
-        return round(self.data["result"] * 100 / self.data["max-result"],2)
+        return self.data["result"] * 100 / self.data["max-result"]
 
     @property
     def weight(self):
         return self.data["weight"]
+
+    @property
+    def classification(self):
+        return "???"

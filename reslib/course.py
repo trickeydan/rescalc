@@ -35,7 +35,7 @@ class Course:
 
     @property
     def classification(self):
-        return "Fail"
+        return "???"
 
 
 class Part:
@@ -53,6 +53,10 @@ class Part:
         return self.data["weight"]
 
     @property
+    def classification(self):
+        return "???"
+
+    @property
     def score(self):
 
         if len(self.semesters) <= 0:
@@ -63,7 +67,7 @@ class Part:
         for sem in self.semesters:
             score += sem.score
         score /= len(self.semesters)
-        return round(score,2)
+        return score
 
     @property
     def semesters(self):
@@ -84,6 +88,10 @@ class Semester:
         return self.data["name"]
 
     @property
+    def classification(self):
+        return "???"
+
+    @property
     def score(self):
 
         if len(self.modules) <= 0:
@@ -94,7 +102,7 @@ class Semester:
         for mod in self.modules:
             score += mod.score
         score /= len(self.modules)
-        return round(score,2)
+        return score
 
     @property
     def modules(self):
