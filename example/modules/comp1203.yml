@@ -1,0 +1,11 @@
+name: Computer Systems I
+core: true
+assessments:
+  - name: Labs
+    weight: 0.25
+    result: 40
+    max-result: 60
+  - name: Exam
+    weight: 0.75
+    result: 72
+    max-result: 100

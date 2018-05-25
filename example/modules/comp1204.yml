@@ -1,0 +1,15 @@
+name: Data Management
+core: true
+assessments:
+  - name: Coursework 1
+    weight: 0.1
+    result: 83
+    max-result: 100
+  - name: Coursework 2
+    weight: 0.15
+    result: 76
+    max-result: 100
+  - name: Exam
+    weight: 0.75
+    result: 58
+    max-result: 100

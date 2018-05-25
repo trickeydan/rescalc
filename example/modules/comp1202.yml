@@ -1,0 +1,15 @@
+name: Programming I
+core: true
+assessments:
+  - name: Coursework
+    weight: 0.4
+    result: 78
+    max-result: 100
+  - name: Labs
+    weight: 0.2
+    result: 38
+    max-result: 45
+  - name: Exam
+    weight: 0.4
+    result: 79
+    max-result: 100

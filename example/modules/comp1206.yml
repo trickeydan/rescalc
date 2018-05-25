@@ -1,0 +1,19 @@
+name: Programming II
+core: true
+assessments:
+  - name: Coursework 1
+    weight: 0.40
+    result: 32
+    max-result: 40
+  - name: Coursework 2
+    weight: 0.35
+    result: 29
+    max-result: 35
+  - name: Unit Testing
+    weight: 0.13
+    result: 9
+    max-result: 13
+  - name: Triangular Arrays
+    weight: 0.12
+    result: 10
+    max-result: 12

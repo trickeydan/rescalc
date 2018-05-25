@@ -1,0 +1,15 @@
+name: Professional Development
+core: true
+assessments:
+  - name: CV
+    weight: 0.15
+    result: 87
+    max-result: 98
+  - name: Group Presentation
+    weight: 0.35
+    result: 65
+    max-result: 100
+  - name: Report
+    weight: 0.5
+    result: 78
+    max-result: 100

@@ -1,0 +1,15 @@
+name: Software Modelling and Design
+core: true
+assessments:
+  - name: Coursework 1
+    weight: 0.15
+    result: 43
+    max-result: 50
+  - name: Coursework 2
+    weight: 0.15
+    result: 38
+    max-result: 50
+  - name: Exam
+    weight: 0.7
+    result: 82
+    max-result: 100

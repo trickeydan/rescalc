@@ -1,0 +1,43 @@
+name: Computer Science MEng
+parts:
+  - name: Year 1
+    weight: 0
+    semesters:
+      - name: Semester 1
+        modules:
+          - comp1202
+          - comp1203
+          - comp1205
+          - comp1215
+      - name: Semester 2
+        modules:
+          - comp1201
+          - comp1204
+          - comp1206
+          - comp1216
+  - name: Year 2
+    weight: 0.2
+    semesters:
+      - name: Semester 1
+        modules:
+
+      - name: Semester 2
+        modules:
+
+  - name: Year 3
+    weight: 0.4
+    semesters:
+      - name: Semester 1
+        modules:
+
+      - name: Semester 2
+        modules:
+
+  - name: Year 4
+    weight: 0.4
+    semesters:
+      - name: Semester 1
+        modules:
+
+      - name: Semester 2
+        modules:

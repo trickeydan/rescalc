@@ -1,0 +1,23 @@
+name: Foundations of Computer Science
+core: true
+assessments:
+  - name: Exam
+    weight: 0.75
+    result: 62
+    max-result: 100
+  - name: Class Test 1
+    weight: 0.0625
+    result: 12
+    max-result: 15
+  - name: Class Test 2
+    weight: 0.0625
+    result: 10
+    max-result: 15
+  - name: Class Test 3
+    weight: 0.0625
+    result: 9
+    max-result: 15
+  - name: Class Test 4
+    weight: 0.0625
+    result: 14
+    max-result: 15

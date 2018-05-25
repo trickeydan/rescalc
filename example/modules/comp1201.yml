@@ -1,0 +1,23 @@
+name: Algorithmics
+core: true
+assessments:
+  - name: Tutorial 1
+    weight: 0.04
+    result: 4
+    max-result: 10
+  - name: Tutorial 2
+    weight: 0.04
+    result: 2
+    max-result: 10
+  - name: Tutorial 3
+    weight: 0.07
+    result: 6
+    max-result: 10
+  - name: In-Class Test
+    weight: 0.35
+    result: 60
+    max-result: 100
+  - name: Exam
+    weight: 0.5
+    result: 62
+    max-result: 100
