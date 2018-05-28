@@ -20,7 +20,7 @@ def print_course_info(course):
 
 
 FUNCTION_MAP = {
-    'info': print_course_info,
+    'all': print_course_info,
 }
 
 parser = argparse.ArgumentParser(description="Result Calculator")

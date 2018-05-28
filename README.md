@@ -31,7 +31,7 @@ You can use the `reslib` module as a library if you would like. It requires PyYA
 * Python 3
 * PyYAML (+ LibYAML if you like speed)
 * A computer
- 
+
 ## Feature Roadmap
 
 I wouldn't currently describe ResCalc as complete, there are many things I want to add.

@@ -35,8 +35,9 @@ class Module:
     @property
     def assessments(self):
         assignments = []
-        for assign in self.data["assessments"]:
-            assignments.append(Assessment(self.folder, assign))
+        if not self.data["assessments"] is None:
+            for assign in self.data["assessments"]:
+                assignments.append(Assessment(self.folder, assign))
         return assignments
 
 
