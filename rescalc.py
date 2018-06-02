@@ -3,12 +3,14 @@
 import argparse
 from reslib import Course
 
-
 def print_course_info(course):
     print("Name:", course.name)
     print("Score:", course.score, "%")
     print("Classification:", course.classification)
-    print("The course has", len(course.parts), "parts:")
+    print("The course has", len(course.parts), "parts")
+
+def print_all_info(course):
+    print_course_info(course)
     for part in course.parts:
         print("\t", round(part.score, 1), "-", part.name)
         for sem in part.semesters:
@@ -18,9 +20,9 @@ def print_course_info(course):
                 for assess in mod.assessments:
                     print("\t\t\t\t", round(assess.score, 1), "-", assess.name)
 
-
 FUNCTION_MAP = {
-    'all': print_course_info,
+    'all': print_all_info,
+    'course': print_course_info
 }
 
 parser = argparse.ArgumentParser(description="Result Calculator")

@@ -23,9 +23,14 @@ class Module:
             return 0
 
         score = 0
+        div_factor = 1
 
         for assess in self.assessments:
-            score += assess.score * assess.weight
+            if assess.score == 0:
+                div_factor -= assess.weight
+            else:
+                score += assess.score * assess.weight
+        score /= div_factor
         return score
 
     @property
