@@ -12,13 +12,13 @@ def print_course_info(course):
 def print_all_info(course):
     print_course_info(course)
     for part in course.parts:
-        print("\t", round(part.score, 1), "-", part.name)
+        print("\t",round(part.score, 1), "-", part.name, "Class:", part.classification)
         for sem in part.semesters:
-            print("\t\t", round(sem.score, 1), "-", sem.name)
+            print("\t\t", round(sem.score, 1), "-", sem.name, "Class:", sem.classification)
             for mod in sem.modules:
-                print("\t\t\t", round(mod.score, 1), "-", mod.name)
+                print("\t\t\t", round(mod.score, 1), "-", mod.name, "Class:", mod.classification)
                 for assess in mod.assessments:
-                    print("\t\t\t\t", round(assess.score, 1), "-", assess.name)
+                    print("\t\t\t\t", round(assess.score, 1), "-", assess.name, "Class:", assess.classification)
 
 FUNCTION_MAP = {
     'all': print_all_info,

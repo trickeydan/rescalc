@@ -2,9 +2,10 @@ import os
 
 from .io import loadfile
 from .module import Module
+from .types import Classifiable
 
 
-class Course:
+class Course(Classifiable):
 
     def __init__(self, folder):
         self.folder = folder
@@ -33,12 +34,7 @@ class Course:
             score += part.score * part.weight
         return score
 
-    @property
-    def classification(self):
-        return "???"
-
-
-class Part:
+class Part(Classifiable):
 
     def __init__(self, folder, data):
         self.folder = folder
@@ -51,10 +47,6 @@ class Part:
     @property
     def weight(self):
         return self.data["weight"]
-
-    @property
-    def classification(self):
-        return "???"
 
     @property
     def score(self):
@@ -77,7 +69,7 @@ class Part:
         return semesters
 
 
-class Semester:
+class Semester(Classifiable):
 
     def __init__(self, folder, data):
         self.folder = folder
@@ -86,10 +78,6 @@ class Semester:
     @property
     def name(self):
         return self.data["name"]
-
-    @property
-    def classification(self):
-        return "???"
 
     @property
     def score(self):

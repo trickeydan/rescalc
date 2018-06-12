@@ -1,9 +1,10 @@
 import os
 
 from .io import loadfile
+from .types import Classifiable
 
 
-class Module:
+class Module(Classifiable):
 
     def __init__(self, folder, module):
         self.folder = folder
@@ -30,10 +31,6 @@ class Module:
         return score
 
     @property
-    def classification(self):
-        return "???"
-
-    @property
     def assessments(self):
         assignments = []
         if not self.data["assessments"] is None:
@@ -42,7 +39,7 @@ class Module:
         return assignments
 
 
-class Assessment:
+class Assessment(Classifiable):
 
     def __init__(self, folder, data):
         self.folder = folder
@@ -59,7 +56,3 @@ class Assessment:
     @property
     def weight(self):
         return self.data["weight"]
-
-    @property
-    def classification(self):
-        return "???"
