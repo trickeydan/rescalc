@@ -26,11 +26,7 @@ class Module:
         div_factor = 1
 
         for assess in self.assessments:
-            if assess.score == 0:
-                div_factor -= assess.weight
-            else:
-                score += assess.score * assess.weight
-        score /= div_factor
+            score += assess.score * assess.weight
         return score
 
     @property
